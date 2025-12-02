@@ -1,0 +1,62 @@
+{% extends "master.html" %}
+{% load static%}
+
+{% block title %}Inicio - SENA APP{% endblock %}
+
+{% block content %}
+
+<div class="hero-box text-center">
+    <h2 class="fw-bold">Bienvenido a SENA APP</h2>
+    <p class="mt-2">Sistema de Gestión de Aprendices</p>
+
+    <p>Administra y consulta la información de los aprendices e instructores.</p>
+
+    <div class="mt-3">
+        <a href="#" class="btn btn-light me-2">Ver Aprendices</a>
+        <a href="#" class="btn btn-light me-2">Ver Instructores</a>
+        <a href="#" class="btn btn-light me-2">Ver Programas</a>
+        <a href="#" class="btn btn-light">Ver Cursos</a>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-3 mb-4">
+        <div class="card p-3 shadow-sm">
+            <h5 class="fw-bold">Lista de Aprendices</h5>
+            <p>Consulta todos los aprendices registrados en el sistema.</p>
+            <p>Total de Aprendices:</p>
+            <a href="{% url 'lista_aprendices' %}" class="btn btn-outline-success">Ver lista</a>
+        </div>
+    </div>
+
+    <div class="col-md-3 mb-4">
+        <div class="card p-3 shadow-sm">
+            <h5 class="fw-bold">Lista de Instructores</h5>
+            <p>Consulta todos los instructores registrados en el sistema.</p>
+            <p>Total de Instructores:</p>
+            <a href="{% url 'lista_instructores' %}" class="btn btn-outline-success">Ver lista</a>
+        </div>
+    </div>
+
+    <div class="col-md-3 mb-4">
+        <div class="card p-3 shadow-sm">
+            <h5 class="fw-bold">Lista de Programas</h5>
+            <p>Consulta todos los programas registrados en el sistema.</p>
+            <p>Total de Programas:</p>
+            <button type="button" class="btn btn-outline-success">Ver lista</button>
+        </div>
+    </div>
+
+    <div class="col-md-3 mb-4">
+        <div class="card p-3 shadow-sm">
+            <h5 class="fw-bold">Lista de Cursos</h5>
+            <p>Consulta todos los cursos registrados en el sistema.</p>
+            <p>Total de Cursos:</p>
+            <p>Cursos Activos:</p>
+            <button type="button" class="btn btn-outline-success">Ver lista</button>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}

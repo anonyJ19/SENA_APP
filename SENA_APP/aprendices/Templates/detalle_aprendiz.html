@@ -1,0 +1,27 @@
+{% extends 'master.html'%}
+{% load static %}
+
+{% block title %} Detalles del Aprendiz - SENA APP {% endblock %}
+
+{% block content %}
+<div class="hero-box">
+    <h2 class="text-center">Detalle del Aprendiz</h2>
+</div>
+
+<div class="card shadow-sm p-4">
+    <h4 class="mb-3">{{ aprendiz.firstname }} {{ aprendiz.lastname }}</h4>
+
+    <ul class="list-group">
+        <li class="list-group-item"><strong>Nombre:</strong> {{ aprendiz.nombre }}</li>
+        <li class="list-group-item"><strong>Apellido:</strong> {{ aprendiz.apellido }}</li>
+        <li class="list-group-item"><strong>Documento:</strong> {{ aprendiz.documento }}</li>
+        <li class="list-group-item"><strong>Teléfono:</strong> {{ aprendiz.telefono }}</li>
+        <li class="list-group-item"><strong>Email:</strong> {{ aprendiz.email }}</li>
+        <li class="list-group-item"><strong>Fecha de Nacimiento:</strong> {{ aprendiz.fecha_nacimiento }}</li>
+        <li class="list-group-item"><strong>Ciudad:</strong> {{ aprendiz.ciudad }}</li>
+        <li class="list-group-item"><strong>Programa:</strong> {{ aprendiz.programa }}</li>
+    </ul>
+
+    <a href="{% url 'lista_aprendices' %}" class="btn btn-sena mt-4">Volver a la lista</a>
+</div>
+{% endblock %}

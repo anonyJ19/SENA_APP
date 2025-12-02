@@ -20,7 +20,6 @@ class instructor(models.Model):
     tipo_documento = models.CharField(max_length=3, choices=TIPO_DOCUMENTO_CHOICES, default='CC') 
     nombre = models.CharField(max_length=100)
     apellido = models.CharField(max_length=100)
-    especialidad = models.CharField(max_length=100)
     telefono = models.CharField(max_length=15)
     correo = models.EmailField(unique=True)
     fecha_nacimiento = models.DateField()

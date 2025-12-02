@@ -1,0 +1,140 @@
+// {% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}SENA APP{% endblock %}</title>
+
+    {% load bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"> <!-- Agregado para iconos -->
+
+    <link rel="stylesheet" href="{% static 'aprendices/mystyles.css' %}">
+
+    <style>
+        /* Estilos personalizados para un diseño más llamativo con colores verde y naranja */
+        body {
+            background: linear-gradient(135deg, #f0f8ff 0%, #e6f7ff 100%); /* Fondo sutil con gradiente */
+            font-family: 'Arial', sans-serif;
+        }
+
+        .navbar {
+            background: linear-gradient(90deg, #28a745 0%, #ff8c00 100%); /* Gradiente verde a naranja */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-bottom: 3px solid #ff8c00;
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+            color: #fff !important;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+        }
+
+        .navbar-brand img {
+            border-radius: 50%;
+            border: 2px solid #fff;
+        }
+
+        .nav-link {
+            color: #fff !important;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: #ffeb3b !important; /* Amarillo para hover */
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            background: linear-gradient(90deg, #ff8c00 0%, #28a745 100%); /* Gradiente naranja a verde */
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            font-weight: bold;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, #28a745, #ff8c00);
+        }
+
+        /* Animaciones sutiles */
+        .navbar-brand, .nav-link {
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            footer {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="{% static 'aprendices/imagenes/logo.gif' %}" alt="Logo" class="logo-nav" width="50" height="50">
+                <span class="ms-2"><i class="fas fa-graduation-cap me-2"></i>SENA APP</span> <!-- Icono agregado -->
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'main' %}"><i class="fas fa-home me-1"></i>Inicio</a> <!-- Icono agregado -->
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'lista_instructores' %}"><i class="fas fa-cogs me-1"></i>Panel Admin</a> <!-- Icono agregado -->
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4 mb-5">
+        {% block content %}
+        {% endblock %}
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p><i class="fas fa-copyright me-1"></i>2025 SENA APP - Sistema de Gestión de Aprendices</p>
+            <p>Desarrollado con <i class="fas fa-heart text-danger"></i> para la educación</p> <!-- Elemento adicional llamativo -->
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

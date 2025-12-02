@@ -1,0 +1,34 @@
+{% extends 'master.html' %}
+{% load static %}
+
+{% block title %} Detalles del Instructor - SENA APP {% endblock %}
+
+{% block content %}
+<div class="hero-box text-center">
+    <h2 class="fw-bold">Detalle del Instructor</h2>
+</div>
+
+<div class="card shadow-sm p-4">
+    <h4 class="mb-3">{{ instructor.nombre }} {{ instructor.apellido }}</h4>
+
+    <ul class="list-group">
+        <li class="list-group-item"><strong>Documento:</strong> {{ instructor.documento_identidad }}</li>
+        <li class="list-group-item"><strong>Tipo de Documento:</strong> {{ instructor.tipo_documento }}</li>
+        <li class="list-group-item"><strong>Teléfono:</strong> {{ instructor.telefono }}</li>
+        <li class="list-group-item"><strong>Email:</strong> {{ instructor.correo }}</li>
+        <li class="list-group-item"><strong>Fecha de Nacimiento:</strong> {{ instructor.fecha_nacimiento }}</li>
+        <li class="list-group-item"><strong>Ciudad:</strong> {{ instructor.ciudad }}</li>
+        <li class="list-group-item"><strong>Dirección:</strong> {{ instructor.direccion }}</li>
+        <li class="list-group-item"><strong>Nivel Educativo:</strong> {{ instructor.nivel_educativo }}</li>
+        <li class="list-group-item"><strong>Especialidad:</strong> {{ instructor.especialidad }}</li>
+        <li class="list-group-item"><strong>Años de Experiencia:</strong> {{ instructor.anos_experiencia }}</li>
+        <li class="list-group-item"><strong>Activo:</strong>
+            {% if instructor.activo %} Sí {% else %} No {% endif %}
+        </li>
+        <li class="list-group-item"><strong>Fecha de Vinculación:</strong> {{ instructor.fecha_vinculacion }}</li>
+        <li class="list-group-item"><strong>Fecha de Registro:</strong> {{ instructor.fecha_registro }}</li>
+    </ul>
+
+    <a href="{% url 'lista_instructores' %}" class="btn btn-sena mt-4">Volver a la lista</a>
+</div>
+{% endblock %}
