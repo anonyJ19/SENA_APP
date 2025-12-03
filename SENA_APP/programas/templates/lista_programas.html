@@ -1,0 +1,57 @@
+{% extends "master.html" %}
+
+{% block title %}
+Lista de Programas
+{% endblock %}
+
+{% block content %}
+
+<h1 class="titulo-pagina">Lista de Programas</h1>
+
+<p>Total de programas: <strong>{{ total_programas }}</strong></p>
+
+{% if lista_programas %}
+<table class="tabla">
+  <thead>
+    <tr>
+      <th>Código</th>
+      <th>Nombre</th>
+      <th>Nivel Formación</th>
+      <th>Modalidad</th>
+      <th>Duración (meses)</th>
+      <th>Duración (horas)</th>
+      <th>Centro Formación</th>
+      <th>Regional</th>
+      <th>Estado</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    {% for prog in lista_programas %}
+    <tr>
+      <td>{{ prog.codigo }}</td>
+      <td>{{ prog.nombre }}</td>
+      <td>{{ prog.nivel_formacion }}</td>
+      <td>{{ prog.modalidad }}</td>
+      <td>{{ prog.duracion_meses }}</td>
+      <td>{{ prog.duracion_horas }}</td>
+      <td>{{ prog.centro_formacion }}</td>
+      <td>{{ prog.regional }}</td>
+      <td>{{ prog.estado }}</td>
+      <td>
+        <a href="{% url 'detalle_programa' prog.codigo %}" class="btn btn-sena btn-sm">
+          Ver más
+        </a>
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% else %}
+<p>No hay programas registrados.</p>
+{% endif %}
+
+<a href="{% url 'main' %}" class="btn">Volver al inicio</a>
+
+{% endblock %}
+           

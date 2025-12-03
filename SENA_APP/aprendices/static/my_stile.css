@@ -1,0 +1,141 @@
+/* Estilos personalizados para un diseño más llamativo con colores verde y naranja, ajustados para ser menos brillantes y más profundos */
+body {
+    background: linear-gradient(135deg, #f0f8f0 0%, #fff8e1 100%); /* Fondo sutil con gradiente en tonos suaves */
+    font-family: 'Arial', sans-serif;
+    color: #333; /* Texto más oscuro para mejor contraste */
+}
+
+.navbar {
+    background: linear-gradient(90deg, #228B22 0%, #FF4500 100%); /* Gradiente verde oscuro a naranja rojizo, menos brillante */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada para profundidad */
+    border-bottom: 3px solid #FF4500;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: #ffffff !important;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Sombra más fuerte para relieve */
+}
+
+.navbar-brand img {
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Sombra en la imagen */
+}
+
+.nav-link {
+    color: #ffffff !important;
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.2s ease; /* Agregada transición de escala */
+}
+
+.nav-link:hover {
+    color: #FFD700 !important; /* Dorado para hover, menos brillante que amarillo */
+    transform: scale(1.05); /* Efecto de escala sutil */
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.95); /* Fondo más opaco para mejor legibilidad */
+    border-radius: 20px; /* Bordes más redondeados */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Sombra más profunda */
+    padding: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd; /* Borde sutil */
+}
+
+footer {
+    background: linear-gradient(90deg, #FF4500 0%, #228B22 100%); /* Gradiente invertido, menos brillante */
+    color: #000000; /* Texto blanco para contraste */
+    text-align: center;
+    padding: 20px;
+    font-weight: bold;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, #228B22, #FF4500);
+}
+
+/* Estilos para tablas: diseño moderno con colores llamativos pero no brillantes */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+table th, table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background: linear-gradient(90deg, #228B22, #FF4500); /* Gradiente en encabezados */
+    color: #ffffff;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+table tbody tr:nth-child(even) {
+    background: #f9f9f9; /* Filas alternadas para mejor legibilidad */
+}
+
+table tbody tr:hover {
+    background: #e8f5e8; /* Hover en filas con tono verde suave */
+    transition: background 0.3s ease;
+}
+
+table td {
+    color: #333;
+}
+
+/* Animaciones sutiles mejoradas */
+.navbar-brand, .nav-link {
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Animación adicional para tablas */
+table {
+    animation: slideIn 0.8s ease-out;
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive adjustments mejoradas */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+        border-radius: 10px;
+    }
+    footer {
+        padding: 15px;
+    }
+    table th, table td {
+        padding: 8px 10px;
+        font-size: 14px;
+    }
+    .navbar-brand {
+        font-size: 18px;
+    }
+}
