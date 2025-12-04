@@ -1,141 +1,120 @@
-/* Estilos personalizados para un diseño más llamativo con colores verde y naranja, ajustados para ser menos brillantes y más profundos */
 body {
-    background: linear-gradient(135deg, #f0f8f0 0%, #fff8e1 100%); /* Fondo sutil con gradiente en tonos suaves */
-    font-family: 'Arial', sans-serif;
-    color: #333; /* Texto más oscuro para mejor contraste */
+    background: #f3f5f9;
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: #2c3e50;
+    margin: 0;
+    padding: 0;
 }
 
 .navbar {
-    background: linear-gradient(90deg, #228B22 0%, #FF4500 100%); /* Gradiente verde oscuro a naranja rojizo, menos brillante */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada para profundidad */
-    border-bottom: 3px solid #FF4500;
+    background: #1e3a8a; 
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    padding: 10px 20px;
 }
 
 .navbar-brand {
-    font-weight: bold;
     color: #ffffff !important;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Sombra más fuerte para relieve */
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 0.5px;
 }
 
 .navbar-brand img {
     border-radius: 50%;
-    border: 2px solid #ffffff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Sombra en la imagen */
+    border: 2px solid #fff;
 }
 
 .nav-link {
-    color: #ffffff !important;
-    font-weight: 500;
-    transition: color 0.3s ease, transform 0.2s ease; /* Agregada transición de escala */
+    color: #cbd5e1 !important;
+    margin-left: 12px;
+    transition: 0.3s ease;
 }
 
 .nav-link:hover {
-    color: #FFD700 !important; /* Dorado para hover, menos brillante que amarillo */
-    transform: scale(1.05); /* Efecto de escala sutil */
+    color: #ffffff !important;
+    transform: translateY(-2px);
 }
 
 .container {
-    background: rgba(255, 255, 255, 0.95); /* Fondo más opaco para mejor legibilidad */
-    border-radius: 20px; /* Bordes más redondeados */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Sombra más profunda */
-    padding: 30px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    border: 1px solid #ddd; /* Borde sutil */
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 25px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+    border: 1px solid #e2e8f0;
 }
 
 footer {
-    background: linear-gradient(90deg, #FF4500 0%, #228B22 100%); /* Gradiente invertido, menos brillante */
-    color: #000000; /* Texto blanco para contraste */
+    background: #1e3a8a;
+    color: #171717;
     text-align: center;
-    padding: 20px;
-    font-weight: bold;
-    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
-    position: relative;
+    padding: 18px;
+    font-size: 14px;
+    margin-top: 40px;
 }
 
-footer::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 5px;
-    background: linear-gradient(90deg, #228B22, #FF4500);
-}
-
-/* Estilos para tablas: diseño moderno con colores llamativos pero no brillantes */
 table {
     width: 100%;
     border-collapse: collapse;
-    margin: 20px 0;
-    background: #ffffff;
+    background: white;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-table th, table td {
-    padding: 12px 15px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
+    margin-top: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
 }
 
 table th {
-    background: linear-gradient(90deg, #228B22, #FF4500); /* Gradiente en encabezados */
-    color: #ffffff;
-    font-weight: bold;
+    background: #1e40af; /* Azul moderado */
+    color: white;
+    padding: 14px;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-}
-
-table tbody tr:nth-child(even) {
-    background: #f9f9f9; /* Filas alternadas para mejor legibilidad */
-}
-
-table tbody tr:hover {
-    background: #e8f5e8; /* Hover en filas con tono verde suave */
-    transition: background 0.3s ease;
+    font-size: 13px;
+    font-weight: bold;
 }
 
 table td {
-    color: #333;
+    padding: 12px 15px;
+    border-bottom: 1px solid #e5e7eb;
+    color: #2c3e50;
 }
 
-/* Animaciones sutiles mejoradas */
-.navbar-brand, .nav-link {
-    animation: fadeIn 1s ease-in-out;
+table tbody tr:nth-child(even) {
+    background: #f8fafc; /* Gris suave */
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-10px); }
-    to { opacity: 1; transform: translateY(0); }
+table tbody tr:hover {
+    background: #e0e7ff; /* Azul claro en hover */
+    transition: 0.25s;
 }
 
-/* Animación adicional para tablas */
-table {
-    animation: slideIn 0.8s ease-out;
+.btn {
+    background: #1e3a8a;
+    color: white !important;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s;
 }
 
-@keyframes slideIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+.btn:hover {
+    background: #3b82f6;
 }
 
-/* Responsive adjustments mejoradas */
+/* ======= RESPONSIVO ======= */
 @media (max-width: 768px) {
-    .container {
-        padding: 15px;
-        border-radius: 10px;
-    }
-    footer {
-        padding: 15px;
-    }
     table th, table td {
-        padding: 8px 10px;
-        font-size: 14px;
+        padding: 8px;
+        font-size: 13px;
     }
+
     .navbar-brand {
         font-size: 18px;
+    }
+
+    .container {
+        padding: 15px;
     }
 }
