@@ -91,7 +91,7 @@ table tbody tr:hover {
 
 .btn {
     background: #1e3a8a;
-    color: white !important;
+    color: rgb(0, 0, 0) !important;
     font-weight: 500;
     padding: 8px 16px;
     border-radius: 8px;

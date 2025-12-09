@@ -16,6 +16,7 @@ Aprendices - SENA APP{% endblock %} {% block content %}
         <th>Email</th>
         <th>Fecha</th>
         <th>Ciudad</th>
+        <th>Acciones</th>
       </tr>
     </thead>
     <tbody>
@@ -35,6 +36,19 @@ Aprendices - SENA APP{% endblock %} {% block content %}
             class="btn btn-sena btn-sm"
           >
             Ver más
+          </a>
+          <a
+            href="{% url 'crear_aprendiz' %}?documento={{ aprendiz.documento }}"
+            class="btn btn-sena btn-sm"
+          >
+            Agregar Aprendiz
+          </a>
+          <a href="{% url 'editar_aprendiz' aprendiz.documento %}" class="btn btn-sena btn-sm">
+
+            Editar Aprendiz
+          </a>
+          <a href="{% url 'eliminar_aprendiz' aprendiz.documento %}" class="btn btn-sena btn-sm">
+            Eliminar Aprendiz
           </a>
         </td>
       </tr>
